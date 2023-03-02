@@ -1,5 +1,21 @@
-import './style.css'
+import "./style.css";
 
-fetch('https://jsonplaceholder.typicode.com/posts')
+fetch("https://jsonplaceholder.typicode.com/users")
   .then((response) => response.json())
-  .then((json) => console.log(json));
+  .then((users) => {
+    
+    const usersContainer = document.getElementById("users-container");
+
+    users.forEach((user) => {
+      const button = document.createElement("button");
+      button.textContent = user.name;
+      button.addEventListener("click", () => {
+        // user info page
+        window.location.href = `user.html?id=${user.id}`;
+      });
+      usersContainer.appendChild(button);
+    });
+  })
+  .catch((error) => {
+    console.error(error);
+  });
