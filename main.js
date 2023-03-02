@@ -11,7 +11,7 @@ fetch("https://jsonplaceholder.typicode.com/users")
       button.textContent = user.name;
       button.addEventListener("click", () => {
         // user info page
-        window.location.href = `user.html?id=${user.id}`;
+        window.location.href = `pages/user.html?id=${user.id}`;
       });
       usersContainer.appendChild(button);
     });
