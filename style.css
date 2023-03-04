@@ -5,6 +5,7 @@
 body {
   @apply bg-slate-200 font-mono text-center;
 }
+
 .user-container {
   @apply container w-[500px] mx-auto flex flex-col gap-4;
 }
