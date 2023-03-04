@@ -3,7 +3,7 @@
 See full preview of the site:
 https://exercrocoise.netlify.app/
 
-#### Tech Stack -> Vanilla JS | Tailwind | Vite
+#### Vanilla JS | Tailwind | Vite
 ------
 
 ### How to use this code 🔥
