@@ -12,3 +12,7 @@ body {
 .title {
   @apply text-2xl my-6 border-b-2 border-black w-[500px] mx-auto py-2;
 }
+
+.user-btn-styles {
+  @apply rounded py-2 px-4 bg-white bg-gradient-to-r hover:from-green-500 hover:to-green-400 transition duration-200 hover:scale-110;
+}

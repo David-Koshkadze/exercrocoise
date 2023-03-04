@@ -1,6 +1,5 @@
 import "./style.css";
 
-const buttonStyles = "rounded py-2 px-4 bg-white bg-gradient-to-r hover:from-green-500 hover:to-green-400 transition duration-200 hover:scale-110";
 
 fetch("https://jsonplaceholder.typicode.com/users")
   .then((response) => response.json())
@@ -11,7 +10,7 @@ fetch("https://jsonplaceholder.typicode.com/users")
       const button = document.createElement("button");
       button.textContent = user.name;
 
-      button.classList.add(...buttonStyles.split(" "));
+      button.classList.add("user-btn-styles");
 
       button.addEventListener("click", () => {
         // user info page

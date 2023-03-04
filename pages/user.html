@@ -10,28 +10,40 @@
   <body>
     <div class="user-container">
       <h1 id="user-name" class="title"></h1>
-      <ul id="user-info"></ul>
-      <button id="view-posts-button">See Posts</button>
+      <ul id="user-info" class="text-left flex flex-col gap-4"></ul>
+      <button id="view-posts-button" class="bg-green-500 px-4 py-2 rounded-md">See Posts</button>
     </div>
 
     <script>
       const searchParams = new URLSearchParams(window.location.search);
-      const userId = searchParams.get("id");
+      const userId = searchParams.get("id"); 
 
       fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
         .then((response) => response.json())
         .then((user) => {
+          
+          console.log(user)
+
           const userNameElement = document.getElementById("user-name");
           userNameElement.textContent = user.name;
 
           const userInfoElement = document.getElementById("user-info");
 
           const keys = ["username", "email", "phone", "website", "company"];
+
           keys.forEach((key) => {
             const listItem = document.createElement("li");
-            listItem.textContent = `${key}: ${user[key]}`;
+
+            if (key === "company") {
+              listItem.textContent = `${key}: ${user[key].name}`
+            } else {
+              listItem.textContent = `${key}: ${user[key]}`;
+            }
+
             userInfoElement.appendChild(listItem);
           });
+
+
 
           // View all posts
           const viewPostsButton = document.getElementById("view-posts-button");
