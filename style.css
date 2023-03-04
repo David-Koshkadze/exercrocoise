@@ -7,13 +7,17 @@ body {
 }
 
 .user-container {
-  @apply container w-[500px] mx-auto flex flex-col gap-4;
+  @apply max-w-[356px] md:w-[500px] mx-auto flex flex-col gap-4;
 }
 
 .title {
-  @apply text-2xl my-6 border-b-2 border-black w-[500px] mx-auto py-2;
+  @apply max-w-[356px] md:w-[500px] text-2xl my-6 border-b-2 border-black  mx-auto py-2;
 }
 
 .user-btn-styles {
   @apply rounded py-2 px-4 bg-white bg-gradient-to-r hover:from-green-500 hover:to-green-400 transition duration-200 hover:scale-110;
+}
+
+.post-container {
+  @apply shadow-md rounded bg-white mb-6 p-4 cursor-pointer hover:shadow-xl hover:border-l-4 border-green-500;
 }
